@@ -8,12 +8,13 @@ while True:
     rw = RandomWalk(50000)
     rw.fill_walk()
 
+
     # Нанесение точек на диаграмму.
     plt.style.use('classic')
     fig, ax = plt.subplots(figsize=(15, 9))
     point_numbers = range(rw.num_points)
-    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,
-               edgecolor='none', s=1)
+    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.viridis,
+               edgecolor='none', s=5)
 
     # Выделение первой и последней точек.
     ax.scatter(0, 0, c='green', edgecolors='none', s=100)
